@@ -6,7 +6,7 @@
 #define pb push_back
 
 using namespace std ;
-ll y,data_size=435,min_support=180,mod=10,maxi=20;
+ll y,data_size=435,min_support=100,mod=10,maxi=20;
 double min_conf =0.9 ;
 string emp="0000000000000000000000000000000000" ;
 ll a[20000][40] ;
