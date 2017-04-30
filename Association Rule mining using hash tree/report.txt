@@ -1,0 +1,11 @@
+Report for Data Mining Assignment 1
+
+Language used : C++
+
+Preprocessing on data:
+Stored vote.arff file in txt format
+? treated as yes for that attrbute
+
+Compilation steps
+Compile rule_mining.cpp along with file input.txt in same directory
+

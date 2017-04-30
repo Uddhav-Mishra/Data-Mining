@@ -6,13 +6,13 @@
 #define pb push_back
 
 using namespace std ;
-ll y,data_size=435,min_support=100,mod=10,maxi=20;
+ll y,data_size=435,min_support=180,mod=10,maxi=20;
 double min_conf =0.9 ;
 string emp="0000000000000000000000000000000000" ;
 ll a[20000][40] ;
 vector<pair<string,ll> > freq,cur,cur1 ;
 vector<pair<string,ll> >::iterator itr,itr1,itr2 ;
-map<string,ll>m1 ;
+map<string,ll>m1 ; // stores support for strings
 map<string,ll>::iterator itr7,itr8 ;
 
 
@@ -24,13 +24,13 @@ vector<ll>v[200000] ;
 vector<string>u[20000] ;
 vector<pair<double,pair<string,string> > > ans ;
 
-void pree(){
+void pree(){ // reading input from vote.arff file
       ifstream infile("data.txt"); // no=0 yes=1 republican=0; democrat=1
   int j = 1 ; string s ;
   while(infile>>s){ int k=1;
     for( int i=0;i<s.size();i++){
-        if(s[i]=='y'){a[j][k]=1 ; k++;}
-        else if(s[i]=='n'||s[i]=='?'){a[j][k]=0;k++;}
+        if(s[i]=='y'||s[i]=='?'){a[j][k]=1 ; k++;}
+        else if(s[i]=='n'){a[j][k]=0;k++;}
         else if(s[i]=='r'){a[j][k]=0;break;}
         else if(s[i]=='d'){a[j][k]=1;break;}
     }
@@ -191,15 +191,26 @@ if(s2==emp||1.0*(1.0*m1[s1]/1.0*m1[s2])>=min_conf){ //cout << 1.0*(1.0*m1[s1]/1.
 
 
 
-
+string attributes[]={"handicapped-infants","water-project-cost-sharing","adoption-of-the-budget-resolution",
+"physician-fee-freeze","el-salvador-aid",
+"religious-groups-in-schools","anti-satellite-test-ban","aid-to-nicaraguan-contras","mx-missile",
+"immigration","synfuels-corporation-cutback",
+"education-spending","superfund-right-to-sue","crime","duty-free-exports",
+"export-administration-act-south-africa","democrat","NO handicapped-infants",
+"NO water-project-cost-sharing","NO adoption-of-the-budget-resolution",
+"NO physician-fee-freeze","NO el-salvador-aid",
+"NO religious-groups-in-schools","NO anti-satellite-test-ban",
+"NO aid-to-nicaraguan-contras","NO mx-missile","NO immigration","NO synfuels-corporation-cutback",
+"NO education-spending","NO superfund-right-to-sue","NO crime",
+"NO duty-free-exports","NO export-administration-act-south-africa","republican"
+};
 
 int main(){
-
-    ios::sync_with_stdio(false);
 
 pre() ;
 
 initializes() ;
+freopen("output.txt","w",stdout) ;
 
 for(int zz=0;zz<34;zz++){
     if(cur.size()==0){break;}
@@ -256,10 +267,19 @@ for(int i=0;i<freq.size();i++){
      itemset_to_rule(freq[i].ff,emp) ;
 }
 sort(ans.begin(),ans.end()) ;
-for(int i=ans.size()-1;i>=0;i--){
+for(int i=ans.size()-1;i>=0;i--){ // printing rules with republic/democrat = 1
         string s1 = ans[i].ss.ff ; string s2 =  ans[i].ss.ss ; int k = 0 ;
 for(int j=0;j<34;j++){if(s2[j]=='1'){k++;}}
-   if((s2[33]=='1'||s2[32]=='1')&&k==1)cout << ans[i].ss.ff << " " << ans[i].ss.ss << endl ;
+   if((s2[16]=='1'||s2[33]=='1')&&k==1){ int fg1=0;
+        for(int j=0;j<34;j++){if(s1[j]=='1'){if(fg1==1){cout << " && ";}cout <<  attributes[j] << " " ;fg1=1;}}
+        cout << "support = " << m1[s1] <<" ==> " ;
+        string st1,st2 ;
+        if(s2[16]=='1'){cout << "democrat support = " << m1[s2] ;st1=st2=s1;st1[16]='1'; }
+        else if(s2[33]=='1'){cout << "republican support = " << m1[s2] ;st1=st2=s1;st1[33]='1';}
+        cout << "\n\n" ;
+       // cout << " confidence for rule = " << 1.0*m1[st1]/m1[st2] << endl << endl ;;
+        //cout << ans[i].ss.ff << " " << ans[i].ss.ss << endl ;
+   }
 }
 //cout << endl << m1["0000000000000000000000000000000000"];
 
