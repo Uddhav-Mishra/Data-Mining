@@ -5,9 +5,8 @@
 #define ss second
 #define pb push_back
 
-using namespace std ;
-ll y,data_size=435,min_support=180,mod=10,maxi=20;
-double min_conf =0.9 ;
+using namespace std ;ll y,data_size=435,min_support=150,mod=10,maxi=20;
+double min_conf =0.5 ;
 string emp="0000000000000000000000000000000000" ;
 ll a[20000][40] ;
 vector<pair<string,ll> > freq,cur,cur1 ;
@@ -24,19 +23,6 @@ vector<ll>v[200000] ;
 vector<string>u[20000] ;
 vector<pair<double,pair<string,string> > > ans ;
 
-void pree(){ // reading input from vote.arff file
-      ifstream infile("data.txt"); // no=0 yes=1 republican=0; democrat=1
-  int j = 1 ; string s ;
-  while(infile>>s){ int k=1;
-    for( int i=0;i<s.size();i++){
-        if(s[i]=='y'||s[i]=='?'){a[j][k]=1 ; k++;}
-        else if(s[i]=='n'){a[j][k]=0;k++;}
-        else if(s[i]=='r'){a[j][k]=0;break;}
-        else if(s[i]=='d'){a[j][k]=1;break;}
-    }
-  }
-}
-
 void pre(){
     freopen("data.txt","r",stdin) ; string s ;
 for( int j=1;j<=data_size;j++){
@@ -44,9 +30,10 @@ for( int j=1;j<=data_size;j++){
          int k=1;
     for( int i=0;i<s.size();i++){
         if(s[i]=='y'){a[j][k]=1 ;a[j][k+17]=0; k++;}
-        else if(s[i]=='n'||s[i]=='?'){a[j][k]=0; a[j][k+17]=1; k++;}
+        else if(s[i]=='n'){a[j][k]=0; a[j][k+17]=1; k++;}
         else if(s[i]=='r'){a[j][k]=0; a[j][k+17]=1;break;}
         else if(s[i]=='d'){a[j][k]=1; a[j][k+17]=0;break;}
+        else if(s[i]=='?'){a[j][k]=0; a[j][k+17]=0; k++;}
     }
   }
 }
@@ -147,7 +134,7 @@ for(int j=i+1;j<=33;j++){
 }
 }
 
-void calc_freq_itemsets(){ // iterative calculation without hashtree
+/*void calc_freq_itemsets(){ // iterative calculation without hashtree
  string s1,s2 ;
 for(int zz=1;zz<=34;zz++){
     itr=cur.begin() ; itr1 = cur.end() ;
@@ -173,9 +160,10 @@ for(int zz=1;zz<=34;zz++){
 }
 
 }
-
+*/
 void itemset_to_rule(string s1,string s2){ //cout << "ghgh " << m1[s1] << " " << 1.0*m1[s2] << endl;
-if(s2==emp||1.0*(1.0*m1[s1]/1.0*m1[s2])>=min_conf){ //cout << 1.0*(1.0*m1[s1]/1.0*m1[s2]) << endl;
+
+if(s2==emp||1.0*(1.0*m1[s1]/(1.0*m1[s2]))>=min_conf){ //cout << "Here " << 1.0*(m1[s1]/(1.0*m1[s2])) << endl;
   if(s2!=emp){ans.pb(mp((1.0*(1.0*m1[s1]/1.0*m1[s2])),mp(s1,s2)));}
   int i ;for(i=33;i>=0;i--){if(s2[i]=='1'){break;}}
   string s3,s4 ;
@@ -225,7 +213,7 @@ insert_hash_tree(mod,maxi,cur[sd].ff,1) ;
         //cout << cur[sd].ff << " " <<  sd << endl;
     }
 
-     cout << cnt << endl ;
+    // cout << cnt << endl ;
      for(int sd=1;sd<data_size;sd++){
         string w1=emp,w2=emp ;
         for(int col=0;col<34;col++){
@@ -236,7 +224,7 @@ insert_hash_tree(mod,maxi,cur[sd].ff,1) ;
         support_counting(w1,w2,1) ;
     }
 
-     cout << m1.size() ;
+     //cout << m1.size() ;
     cur.clear() ;
     itr7 = m1.begin();  itr8=m1.end() ;
     while(itr7!=itr8){
@@ -267,6 +255,7 @@ for(int i=0;i<freq.size();i++){
      itemset_to_rule(freq[i].ff,emp) ;
 }
 sort(ans.begin(),ans.end()) ;
+    cout << ans.size() << endl ;
 for(int i=ans.size()-1;i>=0;i--){ // printing rules with republic/democrat = 1
         string s1 = ans[i].ss.ff ; string s2 =  ans[i].ss.ss ; int k = 0 ;
 for(int j=0;j<34;j++){if(s2[j]=='1'){k++;}}

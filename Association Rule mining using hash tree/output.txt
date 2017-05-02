@@ -1,88 +1,103 @@
-12
-33112
-484412
-1410502
-1242282
-636122
-20212
-2112
-1NO export-administration-act-south-africa support = 615 ==> democrat support = 427
+11557
+NO education-spending support = 551 ==> democrat support = 427
 
-NO education-spending support = 602 ==> democrat support = 427
+NO export-administration-act-south-africa support = 550 ==> democrat support = 427
 
-NO superfund-right-to-sue support = 590 ==> democrat support = 427
+NO duty-free-exports support = 517 ==> democrat support = 427
 
-NO duty-free-exports support = 559 ==> democrat support = 427
+NO el-salvador-aid support = 510 ==> democrat support = 427
 
-NO export-administration-act-south-africa support = 615 ==> republican support = 385
+NO superfund-right-to-sue support = 507 ==> democrat support = 427
 
-NO immigration support = 547 ==> democrat support = 427
+NO immigration support = 504 ==> democrat support = 427
 
-NO el-salvador-aid support = 529 ==> democrat support = 427
-
-NO handicapped-infants  && NO superfund-right-to-sue support = 515 ==> democrat support = 427
-
-physician-fee-freeze  && NO superfund-right-to-sue support = 506 ==> democrat support = 427
-
-NO duty-free-exports support = 559 ==> republican support = 385
-
-NO immigration support = 547 ==> republican support = 385
-
-NO synfuels-corporation-cutback support = 477 ==> democrat support = 427
-
-NO el-salvador-aid support = 529 ==> republican support = 385
-
-religious-groups-in-schools  && NO immigration support = 472 ==> democrat support = 427
+NO aid-to-nicaraguan-contras support = 470 ==> democrat support = 427
 
 NO handicapped-infants support = 467 ==> democrat support = 427
 
-NO superfund-right-to-sue  && NO duty-free-exports support = 460 ==> democrat support = 427
+NO synfuels-corporation-cutback support = 464 ==> democrat support = 427
 
-NO el-salvador-aid  && NO superfund-right-to-sue support = 457 ==> democrat support = 427
+religious-groups-in-schools  && NO immigration support = 455 ==> democrat support = 427
 
-physician-fee-freeze  && NO superfund-right-to-sue  && NO duty-free-exports support = 431 ==> democrat support = 427
+NO handicapped-infants  && NO superfund-right-to-sue support = 453 ==> democrat support = 427
+
+physician-fee-freeze  && NO superfund-right-to-sue support = 448 ==> democrat support = 427
+
+mx-missile  && NO superfund-right-to-sue support = 444 ==> democrat support = 427
 
 physician-fee-freeze  && NO handicapped-infants support = 415 ==> democrat support = 427
 
+physician-fee-freeze  && NO handicapped-infants  && NO superfund-right-to-sue support = 414 ==> democrat support = 427
+
 duty-free-exports support = 414 ==> democrat support = 427
 
-NO handicapped-infants  && NO duty-free-exports support = 411 ==> democrat support = 427
+NO superfund-right-to-sue  && NO duty-free-exports support = 386 ==> democrat support = 427
 
-physician-fee-freeze  && NO duty-free-exports support = 404 ==> democrat support = 427
+NO handicapped-infants  && NO duty-free-exports support = 385 ==> democrat support = 427
 
-NO adoption-of-the-budget-resolution support = 374 ==> democrat support = 427
+mx-missile  && NO duty-free-exports support = 379 ==> democrat support = 427
 
-NO crime support = 371 ==> democrat support = 427
+physician-fee-freeze  && NO duty-free-exports support = 378 ==> democrat support = 427
 
-duty-free-exports  && NO export-administration-act-south-africa support = 356 ==> democrat support = 427
+el-salvador-aid  && NO immigration support = 376 ==> democrat support = 427
 
-NO water-project-cost-sharing support = 343 ==> democrat support = 427
+el-salvador-aid  && religious-groups-in-schools  && NO immigration support = 374 ==> democrat support = 427
 
-NO handicapped-infants  && NO el-salvador-aid support = 333 ==> democrat support = 427
+physician-fee-freeze  && NO handicapped-infants  && NO duty-free-exports support = 365 ==> democrat support = 427
 
-NO immigration  && NO export-administration-act-south-africa support = 330 ==> democrat support = 427
+physician-fee-freeze  && NO superfund-right-to-sue  && NO duty-free-exports support = 364 ==> democrat support = 427
 
-duty-free-exports  && NO education-spending support = 329 ==> democrat support = 427
+anti-satellite-test-ban  && NO education-spending support = 336 ==> democrat support = 427
 
-physician-fee-freeze  && NO el-salvador-aid support = 325 ==> democrat support = 427
+physician-fee-freeze  && NO synfuels-corporation-cutback support = 334 ==> democrat support = 427
 
-physician-fee-freeze  && NO handicapped-infants  && NO el-salvador-aid support = 298 ==> democrat support = 427
+duty-free-exports  && NO export-administration-act-south-africa support = 331 ==> democrat support = 427
+
+NO crime support = 324 ==> democrat support = 427
+
+NO handicapped-infants  && NO el-salvador-aid support = 323 ==> democrat support = 427
+
+NO water-project-cost-sharing support = 323 ==> democrat support = 427
+
+physician-fee-freeze  && NO el-salvador-aid support = 316 ==> democrat support = 427
+
+religious-groups-in-schools  && NO aid-to-nicaraguan-contras support = 310 ==> democrat support = 427
+
+duty-free-exports  && NO education-spending support = 308 ==> democrat support = 427
+
+NO religious-groups-in-schools support = 305 ==> democrat support = 427
+
+religious-groups-in-schools  && NO export-administration-act-south-africa support = 302 ==> democrat support = 427
+
+NO adoption-of-the-budget-resolution support = 302 ==> democrat support = 427
+
+physician-fee-freeze  && NO education-spending support = 296 ==> democrat support = 427
+
+physician-fee-freeze  && NO handicapped-infants  && NO el-salvador-aid support = 291 ==> democrat support = 427
+
+el-salvador-aid  && NO export-administration-act-south-africa support = 280 ==> democrat support = 427
+
+religious-groups-in-schools  && NO education-spending support = 278 ==> democrat support = 427
+
+crime support = 274 ==> democrat support = 427
+
+anti-satellite-test-ban support = 271 ==> democrat support = 427
+
+el-salvador-aid  && NO education-spending support = 269 ==> democrat support = 427
+
+religious-groups-in-schools  && NO immigration  && NO export-administration-act-south-africa support = 268 ==> democrat support = 427
+
+physician-fee-freeze  && NO el-salvador-aid  && NO superfund-right-to-sue support = 266 ==> democrat support = 427
+
+crime  && NO education-spending support = 263 ==> democrat support = 427
+
+NO handicapped-infants  && NO superfund-right-to-sue  && NO duty-free-exports support = 255 ==> democrat support = 427
 
 physician-fee-freeze support = 253 ==> democrat support = 427
 
-anti-satellite-test-ban support = 271 ==> republican support = 385
+mx-missile support = 242 ==> democrat support = 427
 
-physician-fee-freeze  && NO superfund-right-to-sue  && NO crime support = 231 ==> democrat support = 427
+aid-to-nicaraguan-contras support = 239 ==> democrat support = 427
 
-NO handicapped-infants  && NO el-salvador-aid  && NO superfund-right-to-sue support = 224 ==> democrat support = 427
-
-NO handicapped-infants  && NO el-salvador-aid  && NO religious-groups-in-schools support = 215 ==> democrat support = 427
-
-religious-groups-in-schools support = 211 ==> democrat support = 427
-
-physician-fee-freeze  && NO handicapped-infants  && NO el-salvador-aid  && NO superfund-right-to-sue support = 206 ==> democrat support = 427
-
-adoption-of-the-budget-resolution support = 194 ==> democrat support = 427
-
-adoption-of-the-budget-resolution support = 194 ==> republican support = 385
+synfuels-corporation-cutback support = 215 ==> democrat support = 427
 
