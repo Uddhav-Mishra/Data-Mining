@@ -4,6 +4,12 @@
 
 C++
 
+
+**Compilation steps**:
+
+Compile rule_mining.cpp along with file input.txt in same directory
+
+
 **Preprocessing on data**:
 
 * vote.arff file is stored in .txt format.
@@ -12,23 +18,25 @@ C++
 * For each attribute a negation attribute is also considered when attribute value is 0 then negation of that attribute has value 1 and vice versa.
 * ? in the input is treated as no for that attribute.
 
+
 **Hash tree generation**:
+
 To count support hash tree is used to solve problem with least complexity.Hash tree is generated each time
 when k size frequent itemsets are calculated.To calculate k+1 size frequent itemset k size itemset are used
 and hash tree implementation is used to get all possible frequent itemsets.
 
+
 **Rule generation**:
+
 After getting all frequent itemsets rules are generated from those.For each frequent dataset
 lattice of rules is generated and is pruned whever it gets below min_conf.And then achieved rules
 are stored in a vector and then it is sorted in descending order of confidence for that rule.
+
 
 **Output rules**:
 
 Special rules with high confidence are included in output where rhs includes only republic or democrat attribute.
 
-**Compilation steps**:
-
-Compile rule_mining.cpp along with file input.txt in same directory
 
 **Analysis**:
 
